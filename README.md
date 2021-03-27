@@ -1,7 +1,7 @@
 # NovaMap
 This script uses 2 GeoJson files (one for Fairfax county and one for Loudoun county) as well as historical sales prices of townhomes by zipcode to create an interactive choropleth map of percent increase of average sales prices in Northern VA by zipcode. The completed visual is hosted on www.bijoyt.com/novamap. 
 
-![NoVA Choropleth][/Users/bijoythomas/Desktop/Screenshots/Choropleth_Screenshot.png]
+<img width="1277" alt="Choropleth_Screenshot" src="https://user-images.githubusercontent.com/7709854/112723058-1cfd1300-8ee3-11eb-8fca-b105a91c723a.png">
 
 ## Libraries
 I used the folium library to develop the choropleth visualization. 
