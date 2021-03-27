@@ -13,6 +13,12 @@ import folium
 
 #Extracts values from GeoJson file and outputs into 2 column DataFrame
 def prep_df(GeoJsonFile):
+   """
+        Creates a 2 Column DataFrame from GeoJson file
+        
+        @param GeoJsonFile: GeoJson file which holds the coordinates for the various shapes (polygons) in your map
+        @return 2 column dataframe of City and Zipcode 
+    """
     town_count = len(GeoJsonFile["features"])
     
     town = []
@@ -34,6 +40,13 @@ def prep_df(GeoJsonFile):
 
 #Merges GeoJson df and Sales df 
 def merge_df(df1, filename):
+    """
+        Ingests sales price Excel file, creates a DataFrame, and merges with GeoJson DataFrame 
+        
+        @param df1: GeoJson DataFrame
+        @param filename: Filepath of Sales Price Excel File
+        @return 5 column dataframe of City, Zipcode, Closed Sales, 2011 Avg. Sales Price, 2020 Avg. Sales Price, and Percent Change over period
+    """
     #Import file with sales prices
     salesByZip = pd.read_excel(filename)
     
@@ -54,7 +67,7 @@ with urlopen('https://opendata.arcgis.com/datasets/3111976184004077b836f535f31ea
     ffx_zips = json.load(response)
 
 ### COMBINE GEOJSONS ###
-#Reconcile conflicting ZIPCITY/ZI_TOWN and ZIPCODE/ZI_ZIP label
+#Reconcile conflicting ZIPCITY/ZI_TOWN and ZIPCODE/ZI_ZIP keys
 for feature in loco_zips['features']:
     feature['properties']['ZIPCITY'] = feature['properties'].pop('ZI_TOWN')
     feature['properties']['ZIPCODE'] = feature['properties'].pop('ZI_ZIP')
