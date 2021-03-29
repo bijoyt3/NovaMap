@@ -12,6 +12,10 @@ pip install folium
 
 The library offers the user several formatting options for the visualizing your charts as well as options for varying degrees of interactivity. There was a very helpful method to output the finished visualization into an .html file as a local copy which made it extremely easy to upload onto my website. 
 
+## Source Data
+I exported housing data from http://www.getsmartcharts.com/ - an online resource that has historical housing data across Virginia, Maryland, Pennsylvania,
+West Virginia, New Jersey and the District of Columbia. They use MLS data to create visualizations of real estate with customers including ReMax, Long and Foster, and Champion Realty. 
+
 ## Acknowledgements
 Leaned on the folium documentation heavily - https://python-visualization.github.io/folium/
 
