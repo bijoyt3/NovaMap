@@ -10,7 +10,7 @@ I used the folium library to develop the choropleth visualization.
 pip install folium
 ```
 
-The library offers the user several formatting options for the visualizing your charts as well as options for varying degrees of interactivity. There was a very helpful method to output the finished visualization into an .html file as a local copy which made it extremely easy to upload onto my website. 
+The library offers the user several formatting options for visualizing your charts as well as options for varying degrees of interactivity. There was a very helpful method to output the finished visualization into an .html file as a local copy which made it extremely easy to upload onto my website. 
 
 ## Source Data
 I exported housing data from http://www.getsmartcharts.com/ - an online resource that has historical housing data across Virginia, Maryland, Pennsylvania,
